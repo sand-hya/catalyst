@@ -6,8 +6,8 @@ We are available at https://samirparhi-dev.github.io/catalyst/ , Help Us Improve
 
 ## :grin: You will glad to know: 
 
-- We are Open Now and Will be _Forever_
-- The motivation for this Repository to develop script that are intended to use in github action / any kind of server-less application setup to keep away your PC from Bloating with lots of tools / software
+- We are Open Now and Will be _Forever_ .
+- The motivation for this Repository to develop script that are intended to use in github action / any kind of server-less application setup to keep away your PC from Bloating with lots of tools / software .
 - Action are created to leverage the machine resource on GitHub without installing the tools on your own PC.
 - It is just a step to keep away your PC from Bloating with lots of tools / software. The Scripts here are again intended to serve as a function app right from the GitHub to help you get more productive. Kindly help improve wherever possible.
 - Everyone is encouraged to Contribute even a small script as we aim this space to be the goto place for all system engineers/beginners/Cyber security practitioner/student/any one who is interested to learn.
@@ -16,7 +16,7 @@ We are available at https://samirparhi-dev.github.io/catalyst/ , Help Us Improve
 
 - `tools` directory contains all the script that can be reused and consumed for various purpose. Usage of this script are very simple and acts as accelerators to improve some ones productivity.
 
-- `vars` folder contains jenkins pipeline groovy script for reference to get an idea how to write Shared library based pipeline in jenkins
+- `vars` folder contains jenkins pipeline groovy script for reference to get an idea how to write Shared library based pipeline in jenkins.
 
 - `docker` Directory contains Dockerfile/Docker compose file/anything related to docker.
 
@@ -46,9 +46,9 @@ Certification generation options:
 Certificate Authority:
 
 1.	Cosign Flucio
-2.	Let’s encrypt. 
+2.	Let’s encrypt
 3.	Kubernetes CA
-4.	Using a self-signed certificate with openSSL.
+4.	Using a self-signed certificate with openSSL
 
 What can be signed?
 1.	File Blob
