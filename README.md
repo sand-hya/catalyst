@@ -1,10 +1,12 @@
 # ⌖ Catalyst - Little push to your Prodictivity 📈
 
 ##### (Leave us a star ⭐️ on our Repo if it helps !)
-We are available at https://samirparhi-dev.github.io/catalyst/ , Help Us Improve the UI to a Clean and stunning View 🌁.
+
+We are available at https://samirparhi-dev.github.io/catalyst/ , Help Us Improve the UI to a Clean,Responsive and Stunning View 🌁.
 
 ## :grin: You will glad to know: 
 
+- We are Open Now and Will be <u> Forever </u>
 - The motivation for this Repository to develop script that are intended to use in github action / any kind of server-less application setup to keep away your PC from Bloating with lots of tools / software
 - Action are created to leverage the machine resource on GitHub without installing the tools on your own PC.
 - It is just a step to keep away your PC from Bloating with lots of tools / software. The Scripts here are again intended to serve as a function app right from the GitHub to help you get more productive. Kindly help improve wherever possible.
