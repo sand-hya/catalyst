@@ -20,7 +20,7 @@ if sonar-scanner -v; then
  # Set the path to your SonarQube server
 DEFAULT_SONAR_SERVER_URL="http://localhost:9000"
 
-read -p "${BLUE}What is your Sonar Server URL ? The default adress we assume is $DEFAULT_SONAR_SERVER_URL . To keep default value press enter: ${RESET}" user_input
+read -p "${BLUE}What is your Sonar Server URL ? The default adress we assume is $DEFAULT_SONAR_SERVER_URL . \nTo keep default value press enter: ${RESET}" user_input
 
 SONAR_SERVER_URL="${user_input:-DEFAULT_SONAR_SERVER_URL}"
 
