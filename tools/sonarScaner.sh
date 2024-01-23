@@ -12,11 +12,34 @@ BOLD=$(tput bold)
 
 echo -e "\n ${BOLD}${RED}Important !${RESET} This script Assumes that you alreday have the sonar Cli (sonar-scanner) installed and you are currently inside the project directory !!!"
 
+echo -e "${BLUE}Looking for Sonar-Scanner.."
+
+if sonar-scanner -v; then
+ echo "SonarScanner is installed, proceeding with the next command"
+else
+  echo "SonarScanner is not installed  No worries Please Go to the official download page for SonarQube Scanner: https://docs.sonarsource.com/sonarqube/9.9/analyzing-source-code/scanners/sonarscanner/"
+fi
+echo -e "${BLUE}Would you like to Verify the Signature Now ?${RESET} y = Yes, n = No ·"
+
+read option
+
+ if [ "$option" == "y" ]; then
+
+echo -e "\n Verifying the Sign of $fileName Using Public Key e.g. ($keyName.pub)·"
+
+cosign verify-blob $fileName --key $keyName.pub --signature $signatureFileName
+else
+echo -e "\n${BLUE}${BOLD}You have Choosen not to verify the Signature rightnow.😊${RESET}"
+fi
+
 # Set the path to your SonarQube server
+DEFAULT_SONAR_SERVER_URL="http://localhost:9000"
 
-SONAR_SERVER_URL="http://localhost:9000"
+read -p "${BLUE}What is your Sonar Server URL ? The default adress we assume is $DEFAULT_SONAR_SERVER_URL To keep default value press enter: {RESET}" user_input
 
-echo -e "\n ${BLUE}The Sonar Server URL is currently set to  $SONAR_SERVER_URL. You can change it to your server URL any time. (feature: WIP)${RESET}"
+SONAR_SERVER_URL="${user_input:-DEFAULT_SONAR_SERVER_URL}"
+
+echo -e "\n ${BLUE}The Sonar Server URL is currently set to  $SONAR_SERVER_URL"
 
 # Set the project key and name
 
