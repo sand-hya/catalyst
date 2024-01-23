@@ -10,20 +10,17 @@ BLUE=$(tput setaf 4)
 RESET=$(tput sgr0)
 BOLD=$(tput bold)
 
-echo -e "\n ${BOLD}${RED}Important !${RESET} This script Assumes that you alreday have the sonar Cli (sonar-scanner) installed and you are currently inside the project directory !!!"
+echo -e "\n ${BOLD}${RED}Important !${RESET} This script Assumes that you are currently inside the project directory !!!"
 
-echo -e "${BLUE}Looking for Sonar-Scanner.."
+echo -e "${BLUE}Looking for Sonar-Scanner..${RESET}"
 
 if sonar-scanner -v; then
- echo "SonarScanner is installed, proceeding with the next command"
-else
-  echo "SonarScanner is not installed  No worries Please Go to the official download page for SonarQube Scanner: https://docs.sonarsource.com/sonarqube/9.9/analyzing-source-code/scanners/sonarscanner/"
-fi
 
-# Set the path to your SonarQube server
+ echo "${GREEN}SonarScanner is installed ✅, proceeding with the next command.${RESET}"
+ # Set the path to your SonarQube server
 DEFAULT_SONAR_SERVER_URL="http://localhost:9000"
 
-read -p "${BLUE}What is your Sonar Server URL ? The default adress we assume is $DEFAULT_SONAR_SERVER_URL To keep default value press enter: {RESET}" user_input
+read -p "${BLUE}What is your Sonar Server URL ? The default adress we assume is $DEFAULT_SONAR_SERVER_URL . To keep default value press enter: ${RESET}" user_input
 
 SONAR_SERVER_URL="${user_input:-DEFAULT_SONAR_SERVER_URL}"
 
@@ -61,3 +58,10 @@ sonar-scanner \
   -Dsonar.projectKey=$PROJECT_KEY \
   -Dsonar.projectName="$PROJECT_NAME" \
   -Dsonar.sources=$PROJECT_SOURCE_DIR
+
+else
+
+  echo -e "${BOLD}${RED}SonarScanner Installation is not Detected ${RESET} \n${GREEN} No worries, Please visit https://docs.sonarsource.com/sonarqube/9.9/analyzing-source-code/scanners/sonarscanner/ for installation guide${RESET}"
+
+fi
+
