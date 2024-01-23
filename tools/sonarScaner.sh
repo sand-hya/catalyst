@@ -19,18 +19,6 @@ if sonar-scanner -v; then
 else
   echo "SonarScanner is not installed  No worries Please Go to the official download page for SonarQube Scanner: https://docs.sonarsource.com/sonarqube/9.9/analyzing-source-code/scanners/sonarscanner/"
 fi
-echo -e "${BLUE}Would you like to Verify the Signature Now ?${RESET} y = Yes, n = No ·"
-
-read option
-
- if [ "$option" == "y" ]; then
-
-echo -e "\n Verifying the Sign of $fileName Using Public Key e.g. ($keyName.pub)·"
-
-cosign verify-blob $fileName --key $keyName.pub --signature $signatureFileName
-else
-echo -e "\n${BLUE}${BOLD}You have Choosen not to verify the Signature rightnow.😊${RESET}"
-fi
 
 # Set the path to your SonarQube server
 DEFAULT_SONAR_SERVER_URL="http://localhost:9000"
