@@ -10,6 +10,7 @@ BLUE=$(tput setaf 4)
 RESET=$(tput sgr0)
 BOLD=$(tput bold)
 
+echo -e "\n ${BOLD}${GREEN}######################################### ${RESET}\n # You are using Signing Utility script 😊#\n Developed to Accelarate your productivity📈# \n \n # Would love your feedback to get better # \n  ${BOLD}${GREEN}######################################### ${RESET}"
 
 echo -e "\n ${BOLD}${RED}Important !!!${RESET} This script only sign the file/Blobs 📂 Using Sigstore's Cosign Utility· \n\n Enter ctrl+c or control+c to exit from this script any time ·"
 
